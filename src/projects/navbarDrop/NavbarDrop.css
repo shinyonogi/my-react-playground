@@ -1,0 +1,46 @@
+nav ul {
+    list-style: none;
+
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    background-color: #333;
+    color: #fff;
+}
+
+nav ul li {
+    position: relative;
+    min-width: 160px;
+
+    padding: 16px 12px;
+}
+
+nav ul li:hover {
+    cursor: pointer;
+    background-color: #111;
+}
+
+.drop-down__content {
+    position: absolute;
+    left: 0;
+
+    margin-top: 15px;
+    display: none;
+    flex-direction: column;
+    min-width: 160px;
+
+    background-color: #fff;
+    color: #333;
+    border: solid 1px #333;
+}
+
+.drop-down__content li:hover {
+    cursor: pointer;
+    background-color: #f1f1f1;
+}
+
+.drop-down__content--visible {
+    display: flex;
+}
+
