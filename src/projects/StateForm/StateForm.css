@@ -1,0 +1,4 @@
+.stateform {
+    display: flex;
+    flex-direction: column;
+}

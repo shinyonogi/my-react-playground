@@ -20,6 +20,9 @@ const Home = () => {
                     <li>
                         <a onClick={() => navigate("navbardrop")}>Navbar with DropDown Menu</a>
                     </li>
+                    <li>
+                        <a onClick={() => navigate("stateform")}>Form State</a>
+                    </li>
                 </ul>
                 <div className='powered-by'>
                     <p>Powered by </p>
