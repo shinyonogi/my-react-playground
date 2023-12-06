@@ -11,7 +11,6 @@ const ButtonStatePage: React.FC = () => {
         <>
             <div>
                 <h1>Click me!</h1>
-                <p>(Using useState Hook)</p>
                 <button onClick={() => setButtonClickCount((prev) => prev + 1)}>
                     {buttonClickCount}
                 </button>

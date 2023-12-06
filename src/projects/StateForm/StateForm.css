@@ -2,3 +2,17 @@
     display: flex;
     flex-direction: column;
 }
+
+.stateform input {
+    margin: 10px 0px;
+    padding: 5px 0px;
+}
+
+.stateform button {
+    margin-top: 10px;
+}
+
+.form--submitted {
+    position: absolute;
+    top: 3rem;
+}

@@ -1,4 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+
+import GoBackButton from '../../components/GoBackButton';
+
 import './StateForm.css';
 
 interface IStateForm {
@@ -7,24 +10,36 @@ interface IStateForm {
 }
 
 const StateForm = () => {
+    const [isFormSubmitted, setIsFormSubmitted] = useState<boolean>(false);
     const [formEntry, setFormEntry] = useState<IStateForm>(
         {
             name: "",
             favoriteProgrammingLanguage: ""
         }
     );
-
-    useEffect(() => {
-        console.log(formEntry);
-    }, [formEntry]);
+    const [prevFormEntry, setPrevFormEntry] = useState<IStateForm>(
+        {
+            name: "",
+            favoriteProgrammingLanguage: ""
+        }
+    );
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        console.log(`You have submitted the form with following entries: \nYour name: ${formEntry.name} \nYour favorite Programming Language: ${formEntry.favoriteProgrammingLanguage}`);
+
+        setPrevFormEntry(formEntry);
+        setIsFormSubmitted(true);
     };
 
     return (
         <>
+            {isFormSubmitted && (
+                <div className='form--submitted'>
+                    <h2>Your previous form entry</h2>
+                    <h4>Name: {prevFormEntry.name}</h4>
+                    <h4>Favorite Programming Language: {prevFormEntry.favoriteProgrammingLanguage}</h4>
+                </div>
+            )}
             <form className="stateform" onSubmit={handleSubmit}>
                 <h2>Please Enter your data.</h2>
                 <input
@@ -43,6 +58,7 @@ const StateForm = () => {
                 />
                 <button type="submit">Submit</button>
             </form>
+            <GoBackButton />
         </>
   )
 }
