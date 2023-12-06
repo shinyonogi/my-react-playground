@@ -1,32 +1,26 @@
-.project-links li {
-    text-align: left;
-    margin: 1.2rem;
+.project-links {
+    list-style: none;
+    padding: 0;
 }
 
-.project-links li a {
-    padding-left: 0.8rem;
+.project-links li {
+    margin: 1.2rem;
 }
 
 .project-links li a:hover {
     cursor: pointer;
 }
 
-.home p {
-    display: inline;
-}
-
-.home .powered-by {
+.powered-by {
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0);
 
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
 }
 
-.home .vite {
+.powered-by img {
     font-size: 0.3rem;
-    display: inline;
 }

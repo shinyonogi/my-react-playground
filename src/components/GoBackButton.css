@@ -1,6 +1,8 @@
 .go-back__button-navbar {
     position: absolute;
     bottom: 5rem;
+    left: 50%;
+    transform: translate(-50%, 0);
 
     border: solid 1px #333;
 }

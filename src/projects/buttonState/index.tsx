@@ -4,12 +4,12 @@ import GoBackButton from "../../components/GoBackButton";
 
 import './ButtonState.css';
 
-const ButtonStatePage: React.FC = () => {
+const ButtonState: React.FC = () => {
     const [buttonClickCount, setButtonClickCount] = useState<number>(0);
 
     return (
         <>
-            <div>
+            <div className="button-state">
                 <h1>Click me!</h1>
                 <button onClick={() => setButtonClickCount((prev) => prev + 1)}>
                     {buttonClickCount}
@@ -20,4 +20,4 @@ const ButtonStatePage: React.FC = () => {
   )
 }
 
-export default ButtonStatePage;
+export default ButtonState;

@@ -1,13 +1,13 @@
-div {
+.button-state {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-h1 {
+.button-state h1 {
     margin: 0;
 }
 
-button {
+.button-state button {
     margin-top: 20px;
 }

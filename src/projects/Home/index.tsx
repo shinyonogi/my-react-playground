@@ -15,13 +15,13 @@ const Home = () => {
                 <h2>Welcome To My React Playground!</h2>
                 <ul className='project-links'>
                     <li>
-                        <a onClick={() => navigate("buttonstate")}>Button State</a>
+                        <a onClick={() => navigate("buttonstate")}>Button State (useState)</a>
                     </li>
                     <li>
-                        <a onClick={() => navigate("stateform")}>Form State</a>
+                        <a onClick={() => navigate("stateform")}>Form (useState)</a>
                     </li>
                     <li>
-                        <a onClick={() => navigate("navbardrop")}>Navbar with DropDown</a>
+                        <a onClick={() => navigate("navbardrop")}>Navbar with DropDown (could do this without react lol)</a>
                     </li>
                 </ul>
                 <div className='powered-by'>

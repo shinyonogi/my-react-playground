@@ -1,14 +1,14 @@
-.stateform {
+.form {
     display: flex;
     flex-direction: column;
 }
 
-.stateform input {
+.form input {
     margin: 10px 0px;
     padding: 5px 0px;
 }
 
-.stateform button {
+.form button {
     margin-top: 10px;
 }
 

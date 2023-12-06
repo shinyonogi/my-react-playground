@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import ButtonStatePage from "./projects/buttonState";
-import NavbarDrop from "./projects/navbarDrop";
+import ButtonState from "./projects/ButtonState";
+import NavbarDropDown from "./projects/NavbarDropDown";
 import Home from "./projects/Home";
+import StateForm from "./projects/Form";
 
 import './App.css'
-import StateForm from "./projects/StateForm";
 
 function App() {
   return (
@@ -13,8 +13,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="buttonstate" element={<ButtonStatePage />} />
-          <Route path="navbardrop" element={<NavbarDrop />} />
+          <Route path="buttonstate" element={<ButtonState />} />
+          <Route path="navbardrop" element={<NavbarDropDown />} />
           <Route path="stateform" element={<StateForm />} />
         </Routes>
       </BrowserRouter>

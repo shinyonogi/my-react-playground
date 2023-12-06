@@ -4,20 +4,22 @@ import GoBackButton from '../../components/GoBackButton';
 
 import './NavbarDrop.css';
 
-const NavbarDrop = () => {
+const NavbarDropDown = () => {
     const [dropDownVisible, setDropDownVisible] = useState<boolean>(false);
 
     return (
         <>
-            <nav>
-                <ul>
+            <nav className='navbar'>
+                <ul className='navbar-list'>
                     <li onMouseEnter={() => setDropDownVisible(true)} onMouseLeave={() => setDropDownVisible(false)}>
                         <p>Element 1</p>
-                        <ul className={`drop-down__content ${dropDownVisible ? 'drop-down__content--visible' : ''}`}>
-                            <li>SubElement 1</li>
-                            <li>SubElement 2</li>
-                            <li>SubElement 3</li>
-                        </ul>
+                        {dropDownVisible && (
+                            <ul className='drop-down__content'>
+                                <li>SubElement 1</li>
+                                <li>SubElement 2</li>
+                                <li>SubElement 3</li>
+                            </ul>
+                        )}
                     </li>
                     <li><p>Element 2</p></li>
                     <li><p>Element 3</p></li>
@@ -29,4 +31,4 @@ const NavbarDrop = () => {
   )
 }
 
-export default NavbarDrop;
+export default NavbarDropDown;

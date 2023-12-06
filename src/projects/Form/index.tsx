@@ -2,59 +2,59 @@ import { useState } from 'react';
 
 import GoBackButton from '../../components/GoBackButton';
 
-import './StateForm.css';
+import './Form.css';
 
-interface IStateForm {
+interface IFormInputs {
     name: string;
     favoriteProgrammingLanguage: string;
 }
 
 const StateForm = () => {
     const [isFormSubmitted, setIsFormSubmitted] = useState<boolean>(false);
-    const [formEntry, setFormEntry] = useState<IStateForm>(
+    const [formData, setFormData] = useState<IFormInputs>(
         {
             name: "",
             favoriteProgrammingLanguage: ""
         }
     );
-    const [prevFormEntry, setPrevFormEntry] = useState<IStateForm>(
+    const [prevFormData, setPrevFormData] = useState<IFormInputs>(
         {
             name: "",
             favoriteProgrammingLanguage: ""
         }
     );
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-
-        setPrevFormEntry(formEntry);
+    async function handleSubmit(event: React.FormEvent) {
+        event.preventDefault();
+        setPrevFormData(formData);
         setIsFormSubmitted(true);
-    };
+        setFormData({name: "",favoriteProgrammingLanguage: ""});
+    }
 
     return (
         <>
             {isFormSubmitted && (
                 <div className='form--submitted'>
                     <h2>Your previous form entry</h2>
-                    <h4>Name: {prevFormEntry.name}</h4>
-                    <h4>Favorite Programming Language: {prevFormEntry.favoriteProgrammingLanguage}</h4>
+                    <h4>Name: {prevFormData.name}</h4>
+                    <h4>Favorite Programming Language: {prevFormData.favoriteProgrammingLanguage}</h4>
                 </div>
             )}
-            <form className="stateform" onSubmit={handleSubmit}>
+            <form className="form" onSubmit={handleSubmit}>
                 <h2>Please Enter your data.</h2>
                 <input
                     type="text"
                     placeholder="Enter your name here"
                     name="name"
-                    value={formEntry.name}
-                    onChange={(e) => setFormEntry(prev => ({...prev, [e.target.name]: e.target.value}))}
+                    value={formData.name}
+                    onChange={(event) => setFormData(prev => ({...prev, [event.target.name]: event.target.value}))}
                 />
                 <input
                     type="text"
                     placeholder="Enter your favorite Programming Language"
                     name="favoriteProgrammingLanguage"
-                    value={formEntry.favoriteProgrammingLanguage}
-                    onChange={(e) => setFormEntry(prev => ({...prev, [e.target.name]: e.target.value}))}
+                    value={formData.favoriteProgrammingLanguage}
+                    onChange={(event) => setFormData(prev => ({...prev, [event.target.name]: event.target.value}))}
                 />
                 <button type="submit">Submit</button>
             </form>
