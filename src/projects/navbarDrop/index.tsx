@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import GoBackButton from '../../components/goBackButton';
+import GoBackButton from '../../components/GoBackButton';
 
 import './NavbarDrop.css';
 

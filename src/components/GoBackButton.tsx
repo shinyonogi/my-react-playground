@@ -8,7 +8,7 @@ const GoBackButton = () => {
     return (
         <>
             <button className='go-back__button-navbar' onClick={() => navigate("/")}>
-                Go Back To Home
+                Go Back
             </button>
         </>
     )
