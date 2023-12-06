@@ -1,4 +1,7 @@
 import { useState } from 'react';
+
+import GoBackButton from '../../components/goBackButton';
+
 import './NavbarDrop.css';
 
 const NavbarDrop = () => {
@@ -21,7 +24,7 @@ const NavbarDrop = () => {
                     <li><p>Element 4</p></li>
                 </ul>
             </nav>
-
+            <GoBackButton />
         </>
   )
 }

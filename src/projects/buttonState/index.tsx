@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import GoBackButton from "../../components/goBackButton";
+
 import './ButtonState.css';
 
 const ButtonStatePage: React.FC = () => {
@@ -14,6 +16,7 @@ const ButtonStatePage: React.FC = () => {
                     {buttonClickCount}
                 </button>
             </div>
+            <GoBackButton />
         </>
   )
 }

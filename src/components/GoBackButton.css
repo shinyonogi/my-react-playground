@@ -1,0 +1,6 @@
+.go-back__button-navbar {
+    position: absolute;
+    bottom: 5rem;
+
+    border: solid 1px #333;
+}
